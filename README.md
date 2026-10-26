@@ -34,6 +34,10 @@ The original run reports the following mean absolute error (MAE). Lower values i
 | Grid-search random forest | 66.41 | 5-fold cross-validation during tuning |
 | Selected grid-search random forest | **64.08** | Held-out test set |
 
+![Cross-validation MAE for the initial random forest, linear regression, and decision tree](assets/model_comparison.svg)
+
+*The chart compares the three initial models using the same 10-fold cross-validation setup. The held-out test result is shown separately in the table.*
+
 The notebook's grid search selected a random forest with 30 trees and `max_features=2`. Its separate randomized search reported a best cross-validation MAE of 64.81, but the notebook's final held-out test result uses the **grid-search** model, not the randomized-search model.
 
 In the randomized-search model's feature-importance output, longitude and latitude were the two largest individual contributions (approximately 0.256 and 0.234). These are model-specific importance scores, not causal effects.
