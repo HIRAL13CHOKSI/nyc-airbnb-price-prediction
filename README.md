@@ -4,6 +4,7 @@
 
 How can listing characteristics help explain variation in New York City Airbnb prices? This project explores 2019 listing data and develops regression models to estimate price from location, room type, availability, and other listing features.
 
+**Course:** CSE 4502 — Big Data Analytics, University of Connecticut  
 **Project type:** Course programming assignment  
 **Notebook:** [Explore the original analysis](notebooks/nyc_airbnb_original.ipynb)
 
@@ -60,4 +61,4 @@ Exact dependency versions and the match to the original dataset are still being 
 
 Data exploration · preprocessing · regression · cross-validation · hyperparameter search · feature importance · error analysis
 
-Originally developed as a course assignment and presented here as part of Hiral Choksi's data science portfolio.
+Originally developed as a CSE 4502 course assignment and presented here as part of Hiral Choksi's data science portfolio.
