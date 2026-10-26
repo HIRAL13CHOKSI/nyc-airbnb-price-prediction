@@ -17,7 +17,7 @@ How can listing characteristics help explain variation in New York City Airbnb p
 
 ## Dataset and features
 
-The original analysis reads a local file named `AB_NYC_2019_1.csv`. It uses NYC Airbnb listing data from 2019; the dataset is not included in this repository.
+The original analysis reads a local file named `AB_NYC_2019_1.csv`. It uses NYC Airbnb listing data from 2019; the dataset is not included in this repository. A [similarly named 2019 NYC Airbnb dataset on Kaggle](https://www.kaggle.com/dgomonov/new-york-city-airbnb-open-data) may be suitable, but the exact match with the file used in the notebook has not yet been confirmed.
 
 Features used include neighbourhood group, room type, latitude, longitude, minimum nights, review counts, reviews per month, host listing count, and annual availability. Price is the prediction target.
 
@@ -31,7 +31,7 @@ For context, the notebook records a mean cross-validation MAE of about 74.53 for
 
 - The analysis uses a random 80/20 train/test split. Although a notebook heading calls it stratified, the displayed split does not specify stratification.
 - The preprocessing pipeline is fitted to the full training set before cross-validation. A future revision should place preprocessing and the estimator in one pipeline so preprocessing is refit within each fold.
-- The dataset and a verified source link still need to be added before the analysis can be reproduced.
+- The dataset used in the original run must be checked against the linked candidate before the analysis can be reproduced.
 - The notebook contains the original course instructions and exploratory work. Package versions and a clean rerun remain to be verified.
 
 ## Running the original notebook
@@ -40,7 +40,7 @@ For context, the notebook records a mean cross-validation MAE of about 74.53 for
 2. Open [the notebook](notebooks/nyc_airbnb_original.ipynb) in Jupyter or Google Colab.
 3. Install the Python packages used in the notebook, including pandas, NumPy, matplotlib, and scikit-learn, then run the cells in order.
 
-Exact dependency versions and a verified data download link are still being established.
+Exact dependency versions and the match to the original dataset are still being established.
 
 ## Skills demonstrated
 
