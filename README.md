@@ -21,11 +21,25 @@ The original analysis reads a local file named `AB_NYC_2019_1.csv`. It uses NYC 
 
 Features used include neighbourhood group, room type, latitude, longitude, minimum nights, review counts, reviews per month, host listing count, and annual availability. Price is the prediction target.
 
-## Results in the saved notebook
+## Results from the saved notebook
 
-The original notebook reports a **held-out test MAE of approximately 64.08** in the dataset's price units for the selected random forest. This is a saved notebook result and has not yet been independently reproduced.
+The original run reports the following mean absolute error (MAE). Lower values indicate smaller average absolute differences between predicted and listed prices.
 
-For context, the notebook records a mean cross-validation MAE of about 74.53 for linear regression and 67.47 for an initial random forest. These are different evaluation stages and should not be treated as a direct comparison with the held-out result.
+| Model / evaluation | MAE (price units) | Evaluation |
+|---|---:|---|
+| Linear regression | 74.53 | 10-fold cross-validation |
+| Decision tree | 87.46 | 10-fold cross-validation |
+| Initial random forest | 67.47 | 10-fold cross-validation |
+| Grid-search random forest | 66.41 | 5-fold cross-validation during tuning |
+| Selected grid-search random forest | **64.08** | Held-out test set |
+
+The notebook's grid search selected a random forest with 30 trees and `max_features=2`. Its separate randomized search reported a best cross-validation MAE of 64.81, but the notebook's final held-out test result uses the **grid-search** model, not the randomized-search model.
+
+In the randomized-search model's feature-importance output, longitude and latitude were the two largest individual contributions (approximately 0.256 and 0.234). These are model-specific importance scores, not causal effects.
+
+**Interpretation:** The initial random forest had a lower cross-validation MAE than the linear and decision-tree models in the saved run. The tuned model's held-out error was about 64 price units per listing on average. The test and cross-validation values represent different evaluation stages and are not directly interchangeable.
+
+These numbers are taken from saved notebook outputs; they have **not been independently reproduced**. The notebook fits preprocessing on all training data before cross-validation, so cross-validation results may be optimistic. See the limitations below.
 
 ## Interpretation and current limitations
 
