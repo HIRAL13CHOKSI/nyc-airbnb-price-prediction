@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="430" viewBox="0 0 1000 430" role="img" aria-labelledby="title desc">
+<title id="title">Cross-validation MAE by model</title><desc id="desc">Random forest 67.47, linear regression 74.53, decision tree 87.46. Lower mean absolute error is better.</desc>
+<rect width="1000" height="430" rx="18" fill="#f6f9fc"/><text x="48" y="56" font-family="Arial,sans-serif" font-size="28" font-weight="bold" fill="#173b56">Model comparison: cross-validation MAE</text><text x="48" y="88" font-family="Arial,sans-serif" font-size="17" fill="#526778">10-fold cross-validation • lower is better • saved notebook results</text>
+<g font-family="Arial,sans-serif" font-size="19" fill="#18384f"><text x="48" y="163">Random forest</text><text x="48" y="238">Linear regression</text><text x="48" y="313">Decision tree</text></g>
+<rect x="255" y="132" width="472" height="39" rx="6" fill="#248b86"/><rect x="255" y="207" width="522" height="39" rx="6" fill="#407b9d"/><rect x="255" y="282" width="612" height="39" rx="6" fill="#7d9bb1"/>
+<g font-family="Arial,sans-serif" font-size="20" font-weight="bold" fill="#173b56"><text x="741" y="159">67.47</text><text x="791" y="234">74.53</text><text x="881" y="309">87.46</text></g>
+<text x="255" y="372" font-family="Arial,sans-serif" font-size="16" fill="#526778">Mean absolute error (dataset price units)</text><text x="48" y="409" font-family="Arial,sans-serif" font-size="13" fill="#63798a">Preprocessing was fitted before cross-validation; scores require an independent rerun.</text></svg>
