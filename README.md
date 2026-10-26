@@ -22,6 +22,18 @@ The original analysis reads a local file named `AB_NYC_2019_1.csv`. It uses NYC 
 
 Features used include neighbourhood group, room type, latitude, longitude, minimum nights, review counts, reviews per month, host listing count, and annual availability. Price is the prediction target.
 
+## Exploring the data
+
+The original notebook visualizes the distributions of listing features before modeling. The price distribution is strongly right-skewed: many listings are concentrated near the low end of the displayed range, with some much higher prices.
+
+![Histograms of listing prices, location, availability, reviews and other features](assets/listing_feature_distributions.png)
+
+*Original exploratory plots saved in the notebook. These use the full dataset and are descriptive, rather than model evaluation.*
+
+![Scatter matrix of listing price and longitude](assets/price_and_longitude.png)
+
+*The original price–longitude scatter matrix shows a wide spread in prices across locations. It illustrates association, not a causal effect.*
+
 ## Results from the saved notebook
 
 The original run reports the following mean absolute error (MAE). Lower values indicate smaller average absolute differences between predicted and listed prices.
